@@ -10,7 +10,6 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(handlerLogin);
     try {
       const response = await loginUser(username, password);
       localStorage.setItem('authToken', response.data.token);
