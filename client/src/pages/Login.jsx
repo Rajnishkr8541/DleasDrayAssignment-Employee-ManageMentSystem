@@ -10,6 +10,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log(handlerLogin);
     try {
       const response = await loginUser(username, password);
       localStorage.setItem('authToken', response.data.token);
@@ -19,6 +20,7 @@ const Login = () => {
       setError('Invalid username or password');
     }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-teal-500">
